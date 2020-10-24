@@ -18,6 +18,7 @@
 - update `blog/urls` add `name='index'`
 
 ## deployment
+- install `mod_wsgi` globally (out of your current `virtual environment`) see https://pypi.org/project/mod-wsgi/
 
 - create `vhost` (see `deployment` folder, it ship an Apache sample vhost conf, you need to adapt it and put the right path)
 - `wsgi.py` is updated with paths ..
