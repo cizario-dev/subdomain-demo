@@ -25,7 +25,7 @@ SECRET_KEY = 'r1_eh$swj*^rm17t2iezcfz%j52=u2h80pusz7mbmz8nza2+84'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [  # @cizario
+ALLOWED_HOSTS = [  #  @updated
          'mysite.local',
      'api.mysite.local',
     'blog.mysite.local', 
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django_hosts.middleware.HostsRequestMiddleware',  # django hosts
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -61,26 +61,19 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_hosts.middleware.HostsResponseMiddleware',  # django hosts
+    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
-ROOT_URLCONF = 'subdomain.urls.www'  # @cizario
+ROOT_URLCONF = 'subdomain.urls.www'  #  @updated
 
 # django-hosts
 # https://django-hosts.readthedocs.io/en/latest/#settings
 
-ROOT_HOSTCONF = 'subdomain.hosts'
+ROOT_HOSTCONF = 'subdomain.hosts'  #  @updated
 
-DEFAULT_HOST = 'www'
+DEFAULT_HOST = 'www'  #  @updated
 
-PARENT_HOST = 'mysite.local'
-
-# HOST_SCHEME = 'http'
-
-# HOST_PORT = 8000
-
-# HOST_SITE_TIMEOUT = 3600
-
+PARENT_HOST = 'mysite.local'  #  @updated
 
 TEMPLATES = [
     {
@@ -88,9 +81,11 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
-            'builtins': [  # @cizario
+
+            'builtins': [  #  @updated / added
                 'django_hosts.templatetags.hosts_override',  # django hosts
             ],
+
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
