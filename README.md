@@ -1,5 +1,7 @@
 # subdomain-demo
 
+see https://stackoverflow.com/questions/64482644/django-hosts-noreversematch-reverse-for-home-not-found-home-is-not-a-val
+
 ## Setting up a development environment
 
     python -m venv venv
